@@ -1,0 +1,48 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background: #001c38;
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 0 0 30px 30px;
+}
+
+#projects {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+}
+
+.project a {
+  display: inline-block;
+  background: #00162c;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.project a:hover {
+  background: #0073e6;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
