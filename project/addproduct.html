@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPOS Add Product</title>
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="addproduct.css">
+
+
+</head>
+<body>
+ <div>
+        <img id="logo" src="logo.png">
+        <P id="p1">Smart Retail System 🧠</P>
+    </div>
+     <div>
+       <a id="home" href="home.html">Home</a>
+        <a id="dashboard" href="dashboard.html">Dashboard</a>
+        <a id="addproduct" href="addproduct.html">Add Product</a>
+        <a id="sellproduct" href="sellproduct.html">Sell product</a>
+        <a id="logout" href="login.html">Logout</a>
+
+    </div>
+
+<h1 class="title">Add Product</h1>
+
+<form class="form" method="POST" enctype="multipart/form-data">
+
+    <label for="product_name">Product Name</label>
+    <input type="text" id="product_name" required>
+
+    <div class="row">
+        <div style="flex:1;">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" required>
+        </div>
+
+        <div style="flex:1;">
+            <label for="price" >Price</label>
+            <input type="number" step="0.01" id="price" required>
+        </div>
+    </div>
+
+    <div class="row">
+        <div style="flex:1;">
+            <label for="weight">Weight</label>
+            <input type="text" id="weight">
+        </div>
+
+        <div style="flex:1;">
+            <label for="barcode">Barcode</label>
+            <div class="upload-box">
+                <input type="text" id="barcode" accept="image/*">
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="add-btn">Add Product</button>
+
+</form>
+<script src="SPOS.js"></script>
+
+</body>
+</html>

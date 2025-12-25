@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOS Login </title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body id="body">
+    <img src="logo.png">
+    <div id="auth-card">
+        <h2>Login</h2>
+
+        <form>
+            <div id="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div id="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" id="auth-btn" onclick="window.location.href='home.html'">Login</button>
+        </form>
+
+        <div id="switch">
+            Don't have an account? <a href="register.html">Register</a> <!---->
+        </div>
+    </div>
+
+</body>
+<script src="SPOS.js"></script>
+
+</html>

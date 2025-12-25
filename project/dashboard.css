@@ -1,0 +1,53 @@
+h1 {
+    position: absolute;
+    top: 240px;
+    left: 60px;
+    font-size: 50px;
+    font-family: 'Georgia', serif;
+    margin: 0 0 10px 0;
+    color: #46007b;
+    animation: neon 2s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+table {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 60%;
+    margin: 20PX;
+    border-collapse: collapse;
+    background: white;
+    color: #46007b;
+    font-weight: bold;
+     animation: zoomfade 1.5s ease forwards;
+     pointer-events: none;
+
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #23003d;
+    text-align: left;
+}
+
+th {
+    color:white;
+    background: #46007b;
+    font-weight: bold;
+}
+@keyframes zoomfade {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes neon {
+    from { text-shadow: 0 0 10px #4a0075; }
+    to { text-shadow: 0 0 40px #4a0075; }
+}
