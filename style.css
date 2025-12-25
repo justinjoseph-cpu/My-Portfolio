@@ -75,36 +75,3 @@ footer {
   color: #555;
   margin-bottom: 1rem;
 }
-#fproject{
-  font-size: 1rem;
-  color: #011151;
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-left: 1.9rem;
-  padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 280%;
-
-
-}
-#fproject:hover{
-   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-
-}
-#fproject h3 {
-  color: #1e90ff;
-  margin-bottom: 0.5rem;
-}
-#fproject a {
-  display: inline-block;
-  background: #00162c;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  text-decoration: none;
-}
-#fproject a:hover {
-  background: #0073e6;
-}
