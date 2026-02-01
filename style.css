@@ -13,9 +13,6 @@ header {
   padding: 2rem 1rem;
   border-radius: 0 0 30px 30px;
 }
-.projects{
-  margin: 9rem;
-}
 
 .projects a {
   display:inline-block;
