@@ -1,0 +1,959 @@
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--navy) 0%, #0d0050 60%, #1a0070 100%);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 8% 60px;
+}
+
+#hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+#hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201,168,76,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 560px;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero-text h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.hero-text p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-image-wrap {
+  flex: 0 0 460px;
+  position: relative;
+}
+
+#doctor-image {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px 12px 60px 12px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,76,0.2);
+  display: block;
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 20px;
+  left: -20px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 12px;
+  padding: 16px 22px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.badge-number {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.badge-text {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+  opacity: 0.85;
+}
+
+/* ── STATS ── */
+#stats {
+  background: var(--navy);
+  padding: 0;
+  min-height: unset;
+}
+
+.stats-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 8%;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.stat-num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-plus {
+  font-size: 1.8rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 8px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 60px;
+  background: rgba(201,168,76,0.25);
+  flex-shrink: 0;
+}
+
+/* ── SERVICES ── */
+#services {
+  padding: 100px 8%;
+  background: var(--off-white);
+  min-height: unset;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-header .gold-line {
+  margin: 18px auto 24px;
+}
+
+.services-header .section-sub {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(5,0,49,0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--gold);
+  transition: width 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card:hover::after {
+  width: 100%;
+}
+
+.service-card.featured {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.service-card.featured h3 {
+  color: var(--navy);
+}
+
+.service-card.featured p {
+  color: rgba(0, 2, 40, 0.59);
+}
+
+.service-card.featured .service-icon {
+  color: var(--gold);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 18px;
+  display: block;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* ── WHY US ── */
+#why-us {
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: unset;
+}
+
+.why-image-col {
+  flex: 0 0 420px;
+}
+
+.why-img-box {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.why-img-box img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+.why-img-box::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: 12px;
+  bottom: 12px;
+  border: 2px solid var(--gold);
+  border-radius: 14px;
+  z-index: -1;
+}
+
+.why-text-col {
+  flex: 1;
+}
+
+.why-list {
+  list-style: none;
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.why-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.95rem;
+  color: var(--text-mid);
+}
+
+.check {
+  width: 28px;
+  height: 28px;
+  background: rgba(201,168,76,0.12);
+  color: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── REVIEWS ── */
+#reviews {
+  background: var(--navy);
+  padding: 100px 8%;
+  min-height: unset;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.reviews-header .section-title {
+  color: var(--white);
+}
+
+.reviews-header .gold-line {
+  margin: 18px auto 0;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 36px 28px;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-4px);
+}
+
+.review-card.featured-review {
+  background: rgba(201,168,76,0.1);
+  border-color: rgba(201,168,76,0.3);
+}
+
+.stars {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.review-card p {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.reviewer-avatar {
+  width: 42px;
+  height: 42px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.reviewer strong {
+  display: block;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.reviewer span {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-content, .why-us-inner {
+    flex-direction: column;
+  }
+  .hero-text, .hero-text p { max-width: 100%; }
+  .hero-image-wrap { flex: 0 0 auto; width: 100%; max-width: 420px; margin: 0 auto; }
+  .services-grid, .reviews-grid { grid-template-columns: 1fr; }
+  .stats-grid { flex-wrap: wrap; gap: 24px; }
+  .stat-divider { display: none; }
+  #why-us { flex-direction: column; gap: 40px; }
+  .why-image-col { flex: 0 0 auto; width: 100%; }
+}
+
+/* ── HERO DUO (both doctors) ── */
+.hero-duo {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+
+.duo-arch {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 0;
+  height: 88%;
+  border-radius: 200px 200px 24px 24px;
+  background: linear-gradient(160deg, rgba(201,168,76,0.28) 0%, rgba(201,168,76,0.05) 60%, rgba(255,255,255,0.03) 100%);
+  border: 1px solid rgba(201,168,76,0.35);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+}
+
+.duo-img {
+  position: absolute;
+  bottom: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,0.45));
+}
+
+.duo-mai {
+  left: 0;
+  height: 80%;
+  z-index: 2;
+}
+
+.duo-bishoy {
+  right: 0;
+  height: 80%;
+  z-index: 3;
+}
+
+.duo-names {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: 0 0 24px 24px;
+  background: linear-gradient(to top, rgba(5,0,49,0.95), rgba(5,0,49,0));
+}
+
+.duo-names span {
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* ── DOCTORS ── */
+#doctors {
+  padding: 100px 8%;
+  background: var(--white);
+  min-height: unset;
+}
+
+.doctors-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.doctors-header .gold-line {
+  margin: 18px auto 24px;
+}
+
+.doctors-header .section-sub {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.doctor-profile {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  max-width: 1100px;
+  margin: 0 auto 90px;
+}
+
+.doctor-profile:last-child {
+  margin-bottom: 0;
+}
+
+.doctor-profile.reverse {
+  flex-direction: row-reverse;
+}
+
+.doctor-photo {
+  flex: 0 0 380px;
+  height: 460px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy) 0%, #0d0050 60%, #1a0070 100%);
+  border-radius: 12px 12px 60px 12px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.doctor-profile.reverse .doctor-photo {
+  border-radius: 12px 12px 12px 60px;
+}
+
+.doctor-photo::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(201,168,76,0.28) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.doctor-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(201,168,76,0.3);
+  pointer-events: none;
+}
+
+.doctor-photo img {
+  position: relative;
+  z-index: 1;
+  height: 94%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.doctor-bio {
+  flex: 1;
+}
+
+.doctor-bio h3 {
+  font-size: 2.2rem;
+  margin: 6px 0 18px;
+}
+
+.doctor-bio p {
+  font-size: 0.98rem;
+  color: var(--text-mid);
+  line-height: 1.85;
+  margin-bottom: 16px;
+  max-width: 560px;
+}
+
+.doctor-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 30px;
+}
+
+.doctor-tags li {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--navy);
+  background: rgba(201,168,76,0.14);
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 7px 16px;
+  border-radius: 30px;
+}
+
+@media (max-width: 900px) {
+  .hero-duo { height: 440px; }
+  #doctors { padding: 70px 6%; }
+  .doctor-profile,
+  .doctor-profile.reverse {
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 70px;
+  }
+  .doctor-photo { flex: 0 0 auto; width: 100%; max-width: 340px; height: 400px; }
+  .doctor-bio h3 { font-size: 1.8rem; }
+}
+
+/* badge sits above the duo, top-left */
+.hero-image-wrap .hero-badge {
+  top: 30px;
+  bottom: auto;
+  left: -24px;
+  z-index: 6;
+}
+
+/* ── WHY US: both doctors ── */
+.why-img-box.why-duo {
+  height: 520px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--navy) 0%, #0d0050 60%, #1a0070 100%);
+  box-shadow: var(--shadow-lg);
+}
+.why-duo img {
+  width: auto;
+  height: auto;
+  box-shadow: none;
+  border-radius: 0;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 24px rgba(0,0,0,0.45));
+}
+.why-duo .why-mai { height: 94%; margin-right: -46px; position: relative; z-index: 1; }
+.why-duo .why-bishoy { height: 78%; position: relative; z-index: 2; }
+
+
+/* ══ HOVER ANIMATION (symmetric, smooth) ══ */
+:root {
+  --ease-soft: cubic-bezier(.4, 0, .2, 1);
+  --t-soft: 0.55s;
+}
+
+
+/* both doctors: same transition, same values, in and out */
+.duo-img {
+  cursor: pointer;
+  outline: none;
+  transform-origin: bottom center;
+  transition: transform var(--t-soft) var(--ease-soft),
+              filter var(--t-soft) var(--ease-soft),
+              opacity var(--t-soft) var(--ease-soft);
+}
+
+/* hovered doctor: grows gently from the bottom (no jumping, no flicker) */
+.duo-img:hover,
+.duo-img:focus-visible {
+  transform: scale(1.05);
+  filter: drop-shadow(0 22px 30px rgba(0,0,0,0.5)) drop-shadow(0 0 14px rgba(201,168,76,0.35));
+  z-index: 4;
+}
+
+
+/* bio card: sits ABOVE the doctors, inside the hero, fades + slides down */
+.duo-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 7;
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: rgba(5,0,49,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(201,168,76,0.4);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity var(--t-soft) var(--ease-soft),
+              transform var(--t-soft) var(--ease-soft);
+}
+/* arrow pointing down at the hovered doctor */
+.duo-card::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  width: 14px;
+  height: 14px;
+  background: rgba(5,0,49,0.95);
+  border-right: 1px solid rgba(201,168,76,0.4);
+  border-bottom: 1px solid rgba(201,168,76,0.4);
+  transform: rotate(45deg);
+}
+.card-mai::before    { left: 22%; }
+.card-bishoy::before { right: 22%; }
+
+.duo-mai:hover ~ .card-mai,
+.duo-mai:focus-visible ~ .card-mai,
+.duo-bishoy:hover ~ .card-bishoy,
+.duo-bishoy:focus-visible ~ .card-bishoy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.duo-card .dc-eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.duo-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+.duo-card p {
+  font-size: 0.76rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 9px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.duo-card ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 0;
+}
+.duo-card li {
+  font-size: 0.64rem;
+  font-weight: 600;
+  color: var(--gold-light, var(--gold));
+  background: rgba(201,168,76,0.14);
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 3px 10px;
+  border-radius: 30px;
+}
+
+/* Why Us: same gentle grow on the two doctors */
+.why-duo img {
+  cursor: pointer;
+  outline: none;
+  transform-origin: bottom center;
+  transition: transform var(--t-soft) var(--ease-soft),
+              filter var(--t-soft) var(--ease-soft);
+}
+.why-duo img:hover,
+.why-duo img:focus-visible {
+  transform: scale(1.05);
+  filter: drop-shadow(0 20px 28px rgba(0,0,0,0.5)) drop-shadow(0 0 14px rgba(201,168,76,0.35));
+  z-index: 3 !important;
+}
+
+/* doctors are links now; taller duo leaves room above them for the card */
+.hero-duo { height: 600px; }
+.duo-arch { height: 76%; }
+.duo-img { display: block; height: 70%; }
+.duo-img img {
+  display: block;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .hero-duo { height: 520px; }
+  .duo-arch { height: 74%; }
+  .duo-img { height: 68%; }
+  .duo-card { padding: 12px 16px; }
+  .duo-card p { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .duo-img, .duo-card, .why-duo img { transition: none; }
+}
+
+
+/* ══ FINAL: compact card + tap support + phone sizing ══ */
+.duo-img { -webkit-tap-highlight-color: transparent; }
+
+.duo-card {
+  top: 30px;
+  left: 6%;
+  right: 6%;
+  padding: 10px 14px;
+  border-radius: 14px;
+}
+.duo-card p { display: none; }
+.duo-card .dc-eyebrow { font-size: 0.6rem; letter-spacing: 1.2px; margin-bottom: 2px; }
+.duo-card h4 { font-size: 1rem; margin-bottom: 6px; }
+.duo-card ul { gap: 5px; }
+.duo-card li { font-size: 0.6rem; padding: 2px 9px; }
+.card-mai::before    { left: 18%; }
+.card-bishoy::before { right: 18%; }
+
+/* tap state (touch devices) = same look as hover */
+.duo-img.is-active {
+  transform: scale(1.05);
+  filter: drop-shadow(0 22px 30px rgba(0,0,0,0.5)) drop-shadow(0 0 14px rgba(201,168,76,0.35));
+  z-index: 4;
+}
+.duo-mai.is-active ~ .card-mai,
+.duo-bishoy.is-active ~ .card-bishoy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* tablets / phones */
+@media (max-width: 900px) {
+  .duo-card { padding: 9px 12px; }
+  .hero-text h1 { font-size: 2.8rem; }
+}
+@media (max-width: 600px) {
+  #hero { padding: 96px 6% 50px; }
+  .hero-content { gap: 36px; }
+  .hero-text h1 { font-size: 2.2rem; }
+  .hero-text p { font-size: 0.95rem; margin-bottom: 28px; }
+  .hero-actions .btn { flex: 1 1 100%; text-align: center; }
+  .hero-duo { height: 440px; }
+  .duo-arch { height: 72%; }
+  .duo-img { height: 66%; }
+  .duo-names { padding: 10px 12px; }
+  .duo-names span { font-size: 0.7rem; }
+  .hero-image-wrap .hero-badge { left: 0; top: 8px; padding: 10px 14px; z-index: 6; }
+  .badge-number { font-size: 1.6rem; }
+  .badge-text { font-size: 0.6rem; }
+  .duo-card { left: 3%; right: 3%; top: 4px; padding: 8px 10px; }
+  .duo-card h4 { font-size: 0.92rem; margin-bottom: 4px; }
+  .duo-card li { font-size: 0.56rem; padding: 2px 7px; }
+  .stat-num { font-size: 2.2rem; }
+  .doctor-photo { height: 360px; }
+}
+
+/* ══ CARD FROM BELOW: reserved strip under the doctors, card slides UP into it ══
+   --card-space = height of that strip. Change it if you want more/less room. */
+:root { --card-space: 120px; }
+
+.hero-duo { height: calc(520px + var(--card-space)); }
+.duo-arch { bottom: var(--card-space); height: calc((100% - var(--card-space)) * 0.88); }
+.duo-img  { bottom: var(--card-space); height: calc((100% - var(--card-space)) * 0.8); }
+.duo-names { bottom: var(--card-space); }
+
+.duo-card {
+  top: auto;
+  bottom: 0;
+  left: 6%;
+  right: 6%;
+  transform: translateY(18px);   /* starts lower, slides up */
+}
+/* arrow now points UP at the doctor */
+.duo-card::before {
+  bottom: auto;
+  top: -8px;
+  border-right: 0;
+  border-bottom: 0;
+  border-top: 1px solid rgba(201,168,76,0.4);
+  border-left: 1px solid rgba(201,168,76,0.4);
+}
+
+@media (max-width: 900px) {
+  .hero-duo { height: calc(440px + var(--card-space)); }
+  .duo-card { left: 4%; right: 4%; }
+}
+@media (max-width: 600px) {
+  .hero-duo { height: calc(370px + var(--card-space)); }
+  .duo-card { left: 2%; right: 2%; }
+}
+
+/* ══ CARD ON THE OTHER DOCTOR: hover one doctor → his/her card appears over the OTHER doctor,
+      and the other doctor gets blurred ══ */
+:root { --card-space: 0px; }   /* no reserved strip under the doctors anymore */
+
+.duo-card {
+  top: auto;
+  bottom: 18%;                 /* sits over the other doctor's torso, above the names */
+  z-index: 7;
+}
+.duo-card::before { display: none; }   /* no arrow */
+.duo-card ul { flex-wrap: wrap; }
+
+/* Mai's card → right side (over Dr. Bishoy) */
+.card-mai    { left: 52%; right: 2%; }
+/* Bishoy's card → left side (over Dr. Mai) */
+.card-bishoy { left: 2%;  right: 52%; }
+
+/* blur the OTHER doctor (hover, keyboard focus, or tap on touch) */
+.hero-duo:has(.duo-mai:hover) .duo-bishoy,
+.hero-duo:has(.duo-mai:focus-visible) .duo-bishoy,
+.hero-duo:has(.duo-mai.is-active) .duo-bishoy,
+.hero-duo:has(.duo-bishoy:hover) .duo-mai,
+.hero-duo:has(.duo-bishoy:focus-visible) .duo-mai,
+.hero-duo:has(.duo-bishoy.is-active) .duo-mai {
+  filter: drop-shadow(0 18px 28px rgba(0,0,0,0.45)) blur(6px) brightness(0.7);
+  transform: scale(0.98);
+}
+
+@media (max-width: 900px) {
+  .hero-duo { height: 440px; }
+  .card-mai    { left: 50%; right: 1%; }
+  .card-bishoy { left: 1%;  right: 50%; }
+}
+@media (max-width: 600px) {
+  .hero-duo { height: 370px; }
+  .duo-card { bottom: 14%; padding: 7px 8px; }
+  .card-mai    { left: 49%; right: 0; }
+  .card-bishoy { left: 0;   right: 49%; }
+  .duo-card h4 { font-size: 0.8rem; }
+  .duo-card .dc-eyebrow { font-size: 0.5rem; }
+  .duo-card li { font-size: 0.5rem; padding: 2px 6px; }
+}
